@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Register Slicer URL protocol
+cat <<EOF > ~/.local/share/applications/slicer.desktop
+[Desktop Entry]
+Name=Slicer
+Exec=/home/user/Downloads/slicer/Slicer-5.4.0-linux-amd64/Slicer %u
+Type=Application
+Terminal=false
+MimeType=x-scheme-handler/slicer;
+EOF
+
+# Update MIME database
+update-desktop-database ~/.local/share/applications/
+
+# Register Slicer URL protocol
+xdg-mime default slicer.desktop x-scheme-handler/slicer
