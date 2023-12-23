@@ -85,7 +85,8 @@ if is_module_installed(package_name):
     else:
         print(package_name + " is up-to-date")
 else:
-    print(package_name + " is not installed")
+    print( f"{package_name} is not installed, installing {package_name}")
+    slicer.util.pip_install(package_name)
 
 
 from idc_index import index
