@@ -3,7 +3,7 @@
 # Create the AppleScript
 cat <<EOF > ~/slicer.applescript
 on open location this_URL
-      do shell script "/Applications/Slicer.app/Contents/MacOS/Slicer " & quoted form of this_URL
+    do shell script "/Applications/Slicer.app/Contents/MacOS/Slicer " & quoted form of this_URL
 end open location
 EOF
 
